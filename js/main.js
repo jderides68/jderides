@@ -1,6 +1,6 @@
 /**
- * Jb.rides - Main JavaScript File
- * Lead submission integrated with Google Sheets & WhatsApp
+ * jdrides - Main JavaScript File
+ * E-Scooty rental booking with Google Sheets & WhatsApp Integration
  */
 
 // =========================================================================
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Send via URLSearchParams or FormData for no-cors Google Apps Script support
+    // Send via URLSearchParams for no-cors Google Apps Script support
     const formData = new URLSearchParams();
     for (const key in payload) {
       formData.append(key, payload[key]);
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 1. AUTO-OPEN CONTACT MODAL ON FIRST VISIT ACROSS ALL PAGES
   const autoModalElement = document.getElementById('autoContactModal');
   if (autoModalElement && typeof bootstrap !== 'undefined') {
-    const hasSeenModal = sessionStorage.getItem('jb_rides_modal_shown');
+    const hasSeenModal = sessionStorage.getItem('jdrides_modal_shown');
     
     if (!hasSeenModal) {
       setTimeout(() => {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
           keyboard: true
         });
         contactModal.show();
-        sessionStorage.setItem('jb_rides_modal_shown', 'true');
+        sessionStorage.setItem('jdrides_modal_shown', 'true');
       }, 1200);
     }
   }
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
       
       const name = form.querySelector('[name="customer_name"]')?.value || 'Customer';
       const phone = form.querySelector('[name="customer_phone"]')?.value || '';
-      const vehicle = form.querySelector('[name="vehicle_type"]')?.value || 'Scooty/Bike';
+      const vehicle = form.querySelector('[name="vehicle_type"]')?.value || 'White E-Scooty (Daily ₹249)';
       const pickupDate = form.querySelector('[name="pickup_date"]')?.value || 'Immediately';
       const duration = form.querySelector('[name="rental_duration"]')?.value || '1 Day';
       const notes = form.querySelector('[name="customer_notes"]')?.value || '';
-      const isModal = form.closest('#autoContactModal') ? 'Auto Popup Modal' : 'Home/Pricing Booking Card';
+      const isModal = form.closest('#autoContactModal') ? 'Auto Popup Modal' : 'Home/Pricing Form';
 
       // 1. Send data to Google Sheet
       sendLeadToGoogleSheet({
@@ -82,28 +82,30 @@ document.addEventListener('DOMContentLoaded', function () {
         vehicle_type: vehicle,
         rental_duration: duration,
         pickup_date: pickupDate,
-        customer_notes: notes,
+        customer_notes: notes + ' | DL & Aadhar verified',
         lead_source: isModal
       });
 
-      // 2. Construct WhatsApp message
-      let message = `*New Ride Rental Enquiry - Jb.rides*%0A%0A`;
-      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      // 2. Construct WhatsApp message for jdrides owner (+91 95821 16104)
+      let message = `*New White E-Scooty Booking - jdrides*%0A%0A`;
+      message += `*Customer Name:* ${encodeURIComponent(name)}%0A`;
       message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
-      message += `*Vehicle Required:* ${encodeURIComponent(vehicle)}%0A`;
+      message += `*Vehicle:* ${encodeURIComponent(vehicle)}%0A`;
+      message += `*Rate:* ₹249/Day%0A`;
+      message += `*Duration:* ${encodeURIComponent(duration)}%0A`;
       message += `*Pickup Date:* ${encodeURIComponent(pickupDate)}%0A`;
-      message += `*Rental Duration:* ${encodeURIComponent(duration)}%0A`;
+      message += `*Documents:* Driving License & Aadhar Card Ready%0A`;
       if (notes) {
-        message += `*Requirement:* ${encodeURIComponent(notes)}%0A`;
+        message += `*Notes:* ${encodeURIComponent(notes)}%0A`;
       }
-      message += `%0A_Sent via Jb.rides website enquiry form._`;
+      message += `%0A_Sent via jdrides website enquiry form._`;
 
       // 3. Show friendly confirmation
       const alertBox = form.querySelector('.form-alert');
       if (alertBox) {
         alertBox.innerHTML = `
           <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-            <i class="fa-solid fa-circle-check me-2"></i> Thank you, <strong>${name}</strong>! Your booking request has been saved. Redirecting to WhatsApp for instant confirmation...
+            <i class="fa-solid fa-circle-check me-2"></i> Thank you, <strong>${name}</strong>! Your White E-Scooty request has been saved. Redirecting to WhatsApp for instant confirmation...
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
           </div>
         `;
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(`Thank you, ${name}! Your booking request has been saved. Our team will contact you shortly.`);
       }
 
-      // 4. Open WhatsApp
+      // 4. Open WhatsApp with owner's number
       setTimeout(() => {
         window.open(`https://wa.me/919582116104?text=${message}`, '_blank');
         form.reset();
@@ -132,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const name = document.getElementById('contactName')?.value || 'Friend';
       const phone = document.getElementById('contactPhone')?.value || '';
       const email = document.getElementById('contactEmail')?.value || '';
-      const vehicle = document.getElementById('contactVehicle')?.value || '';
+      const vehicle = document.getElementById('contactVehicle')?.value || 'White E-Scooty (Daily ₹249)';
       const message = document.getElementById('contactMessage')?.value || '';
 
       // Send to Google Sheet
@@ -149,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (alertBox) {
         alertBox.innerHTML = `
           <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fa-solid fa-circle-check me-2"></i> Thank you, <strong>${name}</strong>! We have received your message. Our team at Jb.rides (Tri Nagar) will get back to you immediately on <strong>${phone}</strong>.
+            <i class="fa-solid fa-circle-check me-2"></i> Thank you, <strong>${name}</strong>! We have received your inquiry. Our team at jdrides (Tri Nagar) will get back to you immediately on <strong>${phone}</strong>.
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
           </div>
         `;
@@ -180,6 +182,16 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         });
       });
+    });
+  }
+
+  // 5. INITIALIZE AOS (Animate On Scroll)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
     });
   }
 });

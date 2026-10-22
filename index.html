@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -36,7 +38,7 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <span class="scooty-icon"><i class="fa-solid fa-moped"></i></span>
+        <i class="fa-solid fa-motorcycle text-warning me-2 fs-3"></i>
         <span>jd<span class="brand-badge">rides</span></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
@@ -63,11 +65,11 @@
   <section class="hero-section">
     <div class="container">
       <div class="row align-items-center g-4">
-        <div class="col-lg-7">
+        <div class="col-lg-7" data-aos="fade-right">
           <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3">
             <i class="fa-solid fa-leaf me-1"></i> 100% Electric E-Scooty Rental in Delhi | Zero Petrol Cost
           </span>
-          <h1 class="hero-title">Rent White E-Scooty at Just ₹249/Day in Delhi</h1>
+          <h1 class="hero-title">Rent Scooties at Best Prices in Delhi</h1>
           <p class="hero-subtitle">
             Say goodbye to expensive petrol! Rent modern <strong>White Electric Scooties</strong> with 100-120 KM range on a single charge. Smooth silent drive, large boot space, and portable home charger included. <strong>Only Driving License & Aadhar Card required!</strong>
           </p>
@@ -98,13 +100,13 @@
         </div>
 
         <!-- Rent Booking Card (1 Form on page) -->
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="fade-left">
           <div class="hero-booking-card">
             <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
               <h4 class="fw-bold mb-0 text-dark">
-                <i class="fa-solid fa-bolt text-warning me-2"></i>Book White E-Scooty
+                <i class="fa-solid fa-motorcycle text-warning me-2"></i>Book Your Ride
               </h4>
-              <span class="badge bg-success">₹249/Day Offer</span>
+              <span class="badge bg-success">Instant Confirmation</span>
             </div>
             <p class="small text-muted mb-3">Fill in details for instant quote & quick booking dispatch.</p>
 
@@ -155,19 +157,12 @@
               </div>
 
               <div class="mb-3">
-                <label class="form-label small fw-semibold">Documents Available *</label>
-                <div class="p-2 bg-light rounded small text-muted border">
-                  <i class="fa-solid fa-circle-check text-success me-1"></i> Original <strong>Driving License</strong> + <strong>Aadhaar Card</strong> required at pickup.
-                </div>
-              </div>
-
-              <div class="mb-3">
                 <label class="form-label small fw-semibold">Special Notes / Requirements</label>
-                <textarea name="customer_notes" rows="2" class="form-control" placeholder="e.g. Need extra helmet, delivery requirement, etc."></textarea>
+                <textarea name="customer_notes" rows="2" class="form-control" placeholder="Optional comments or requirements"></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary-custom w-100 py-2">
-                <i class="fa-brands fa-whatsapp me-2"></i> Book E-Scooty on WhatsApp
+                <i class="fa-brands fa-whatsapp me-2"></i> Book Ride on WhatsApp
               </button>
 
               <div class="form-alert"></div>
@@ -181,7 +176,7 @@
   <!-- HIGHLIGHT SECTION: REAL E-SCOOTY PHOTOS -->
   <section class="py-5 bg-white">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-badge">Our E-Scooty Fleet</span>
         <h2 class="section-title">Smart White Electric Scooty for Rent</h2>
         <p class="section-desc">Pristine white finish, full digital console, huge storage boot, and 100% electric performance. Starting at just ₹249/Day!</p>
@@ -189,12 +184,12 @@
 
       <div class="row g-4 align-items-center">
         <!-- Image 1 Showcase -->
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <div class="custom-card shadow-sm p-2">
-            <img src="images/escooty-white-1.jpg" alt="White E-Scooty Full Angles View" class="img-fluid rounded-3 w-100" style="object-fit: cover;">
+            <img src="images/escooty-ola-features-1.jpg" alt="White E-Scooty All Angles View" class="img-fluid rounded-3 w-100" style="object-fit: cover;">
             <div class="p-3">
               <div class="d-flex justify-content-between align-items-center">
-                <h5 class="fw-bold mb-0">White E-Scooty (All Angles)</h5>
+                <h5 class="fw-bold mb-0">White E-Scooty (All Angles & Details)</h5>
                 <span class="badge bg-success">100% Electric</span>
               </div>
               <p class="small text-muted mt-2 mb-0">Front, side, and rear view showing elegant white body, LED headlamps, digital display & under-seat boot space.</p>
@@ -203,12 +198,12 @@
         </div>
 
         <!-- Image 2 Showcase -->
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
           <div class="custom-card shadow-sm p-2">
-            <img src="images/escooty-white-2.jpg" alt="White E-Scooty Features" class="img-fluid rounded-3 w-100" style="object-fit: cover;">
+            <img src="images/escooty-ola-features-2.jpg" alt="White E-Scooty Features & Tech" class="img-fluid rounded-3 w-100" style="object-fit: cover;">
             <div class="p-3">
               <div class="d-flex justify-content-between align-items-center">
-                <h5 class="fw-bold mb-0">Smart EV Tech & Comfort</h5>
+                <h5 class="fw-bold mb-0">Smart EV Tech, Cockpit & Storage</h5>
                 <span class="badge bg-warning text-dark">₹249 / Day</span>
               </div>
               <p class="small text-muted mt-2 mb-0">Eco Friendly, Cost Effective, Easy to Ride & Safe. Fast home charging with any normal household socket.</p>
@@ -222,7 +217,7 @@
   <!-- Popular Rental Plans Preview -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-badge">Affordable Rental Plans</span>
         <h2 class="section-title">White E-Scooty Rental Packages</h2>
         <p class="section-desc">Choose from our daily, weekly, and monthly packages. Zero petrol expenses save you thousands of rupees every month!</p>
@@ -230,12 +225,12 @@
 
       <div class="row g-4 justify-content-center">
         <!-- Plan 1: Daily -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper" style="height: 200px;">
+            <div class="vehicle-img-wrapper" style="height: 200px; background-color: #fff;">
               <span class="badge-tag">Most Popular Daily</span>
               <span class="badge-fuel"><i class="fa-solid fa-bolt me-1"></i> 100% EV</span>
-              <img src="images/escooty-white-1.jpg" alt="White E-Scooty Daily Rent">
+              <img src="images/escooty-white-card.jpg" alt="White E-Scooty Daily Rent" style="object-fit: contain; padding: 10px;">
             </div>
             <div class="p-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
@@ -262,12 +257,12 @@
         </div>
 
         <!-- Plan 2: Weekly -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="custom-card shadow-sm border-warning">
-            <div class="vehicle-img-wrapper" style="height: 200px;">
+            <div class="vehicle-img-wrapper" style="height: 200px; background-color: #fff;">
               <span class="badge-tag bg-warning text-dark">Super Value (7 Days)</span>
               <span class="badge-fuel"><i class="fa-solid fa-bolt me-1"></i> 100% EV</span>
-              <img src="images/escooty-white-2.jpg" alt="White E-Scooty Weekly Rent">
+              <img src="images/escooty-white-landscape.jpg" alt="White E-Scooty Weekly Rent" style="object-fit: contain; padding: 10px;">
             </div>
             <div class="p-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
@@ -294,12 +289,12 @@
         </div>
 
         <!-- Plan 3: Monthly -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper" style="height: 200px;">
+            <div class="vehicle-img-wrapper" style="height: 200px; background-color: #fff;">
               <span class="badge-tag bg-success text-white">Maximum Savings (30 Days)</span>
               <span class="badge-fuel"><i class="fa-solid fa-bolt me-1"></i> 100% EV</span>
-              <img src="images/escooty-white-1.jpg" alt="White E-Scooty Monthly Rent">
+              <img src="images/escooty-white-card.jpg" alt="White E-Scooty Monthly Rent" style="object-fit: contain; padding: 10px;">
             </div>
             <div class="p-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
@@ -324,12 +319,67 @@
             </div>
           </div>
         </div>
+                  Rent Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="text-center mt-5">
+      <div class="text-center mt-5" data-aos="fade-up">
         <a href="pricing.html" class="btn btn-outline-custom">
           View Complete ₹249 Pricing & Deposit Details <i class="fa-solid fa-arrow-right ms-2"></i>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section (New Section 1) -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-badge">Fast & Hassle-Free</span>
+        <h2 class="section-title">How To Rent White E-Scooty in 3 Steps</h2>
+        <p class="section-desc">Get on the road in minutes! No long paperwork, zero fuel expense, and quick paperless verification.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-card">
+            <span class="step-badge">STEP 01</span>
+            <div class="step-icon-wrap">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Book Online or WhatsApp</h5>
+            <p class="small text-muted mb-0">Select your preferred dates (Daily ₹249, Weekly or Monthly) and send your booking inquiry instantly via our website or direct WhatsApp.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-card">
+            <span class="step-badge">STEP 02</span>
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Quick 2-Doc Verification</h5>
+            <p class="small text-muted mb-0">Just show your original <strong>Driving License</strong> and <strong>Aadhaar Card</strong>. Verification is completed in under 2 minutes with zero hassle.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-card">
+            <span class="step-badge">STEP 03</span>
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Collect Keys & Ride Free</h5>
+            <p class="small text-muted mb-0">Collect your sanitized White E-Scooty along with free portable charger and helmet from our Tri Nagar shop. Enjoy 100% petrol-free rides!</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -360,7 +410,7 @@
             <div class="row g-4">
               <!-- Card 1 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-1.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-ola-features-1.jpg');">
                   <div class="story-card-content">
                     <h4>Why buy, when you can rent for ₹249?</h4>
                     <p class="small text-white-50 mb-3">No EMIs, no insurance hassle, no battery depreciation. Just rent and ride.</p>
@@ -372,7 +422,7 @@
               </div>
               <!-- Card 2 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-2.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-ola-features-2.jpg');">
                   <div class="story-card-content">
                     <h4>Zero Petrol Expense</h4>
                     <p class="small text-white-50 mb-3">Charge at home with standard 3-pin plug in just a few units of electricity.</p>
@@ -384,7 +434,7 @@
               </div>
               <!-- Card 3 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-1.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-white-landscape.jpg');">
                   <div class="story-card-content">
                     <h4>DL + Aadhar Verification</h4>
                     <p class="small text-white-50 mb-3">Simple 2-document verification. Get keys in less than 5 minutes!</p>
@@ -396,7 +446,7 @@
               </div>
               <!-- Card 4 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-2.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-ola-features-1.jpg');">
                   <div class="story-card-content">
                     <h4>Near Kanhaiya Nagar Metro</h4>
                     <p class="small text-white-50 mb-3">Store located at Tri Nagar, just 2 minutes walking from metro station.</p>
@@ -414,7 +464,7 @@
             <div class="row g-4">
               <!-- Card 5 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-2.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-ola-features-2.jpg');">
                   <div class="story-card-content">
                     <h4>Delivery Riders Special</h4>
                     <p class="small text-white-50 mb-3">Zomato/Swiggy delivery partners save up to ₹4,000 monthly on petrol.</p>
@@ -426,7 +476,7 @@
               </div>
               <!-- Card 6 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-1.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-white-card.jpg');">
                   <div class="story-card-content">
                     <h4>Large Under-Seat Boot</h4>
                     <p class="small text-white-50 mb-3">Keep helmets, groceries, backpacks and charger safely locked inside.</p>
@@ -438,7 +488,7 @@
               </div>
               <!-- Card 7 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-2.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-ola-features-1.jpg');">
                   <div class="story-card-content">
                     <h4>Smart Digital Display</h4>
                     <p class="small text-white-50 mb-3">Live speed, battery percentage, and riding modes at your fingertips.</p>
@@ -450,7 +500,7 @@
               </div>
               <!-- Card 8 -->
               <div class="col-md-6 col-lg-3">
-                <div class="story-card" style="background-image: url('images/escooty-white-1.jpg');">
+                <div class="story-card" style="background-image: url('images/escooty-white-landscape.jpg');">
                   <div class="story-card-content">
                     <h4>Instant Deposit Refund</h4>
                     <p class="small text-white-50 mb-3">Refundable deposit credited back instantly via UPI on returning the scooty.</p>
@@ -467,17 +517,107 @@
     </div>
   </section>
 
+  <!-- Cost Comparison & Monthly Savings Section (New Section 2) -->
+  <section class="py-5 bg-light border-top border-bottom">
+    <div class="container py-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-badge">Huge Savings</span>
+        <h2 class="section-title">White E-Scooty vs Petrol Scooty</h2>
+        <p class="section-desc">See how much money you save every month by switching to our White Electric Scooty rental!</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch justify-content-center">
+        <!-- Petrol Scooty Card -->
+        <div class="col-md-6 col-lg-5" data-aos="fade-right">
+          <div class="comparison-card">
+            <div class="comparison-header bg-white">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0 text-muted">Petrol Scooty</h5>
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle">High Running Cost</span>
+              </div>
+              <p class="small text-muted mt-2 mb-0">Expensive daily petrol & ongoing maintenance</p>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-tag text-muted me-2"></i>Daily Rental</span>
+                <span class="fw-semibold">₹450 - ₹600 / Day</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-gas-pump text-danger me-2"></i>Daily Fuel / Petrol</span>
+                <span class="text-danger fw-semibold">₹200 - ₹300 / Day</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-wrench text-muted me-2"></i>Maintenance & Engine Oil</span>
+                <span class="text-danger fw-semibold">Extra Out-of-pocket</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-smog text-danger me-2"></i>Pollution & Emissions</span>
+                <span class="text-danger fw-semibold">High Carbon Smoke</span>
+              </li>
+              <li class="pt-3 border-top">
+                <span class="fw-bold text-dark">Estimated Monthly Cost:</span>
+                <span class="text-danger fw-bold fs-5">₹12,000 - ₹15,000+</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- White E-Scooty Card (Highlighted) -->
+        <div class="col-md-6 col-lg-5" data-aos="fade-left">
+          <div class="comparison-card highlight">
+            <div class="comparison-header">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0 text-dark">
+                  <i class="fa-solid fa-bolt text-warning me-2"></i>jdrides White E-Scooty
+                </h5>
+                <span class="badge bg-success">Smart Choice</span>
+              </div>
+              <p class="small text-muted mt-2 mb-0">Zero petrol cost, silent ride & home charging</p>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-tag text-success me-2"></i>Daily Rental</span>
+                <span class="text-primary-custom fw-bold" style="color: #ff6000;">Just ₹249 / Day</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-plug text-success me-2"></i>Charging Cost (100 KM)</span>
+                <span class="text-success fw-bold">~₹10 only (Home Socket)</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-shield-halved text-success me-2"></i>Maintenance & Servicing</span>
+                <span class="text-success fw-bold">100% Free & Covered</span>
+              </li>
+              <li>
+                <span class="text-muted"><i class="fa-solid fa-leaf text-success me-2"></i>Eco Friendly EV</span>
+                <span class="text-success fw-bold">Zero Smoke & Noise</span>
+              </li>
+              <li class="pt-3 border-top">
+                <span class="fw-bold text-dark">You Save Every Month:</span>
+                <span class="text-success fw-bold fs-5">Save ₹5,000 to ₹8,000!</span>
+              </li>
+            </ul>
+            <div class="p-3 bg-white text-center border-top">
+              <button class="btn btn-primary-custom w-100" data-bs-toggle="modal" data-bs-target="#autoContactModal">
+                <i class="fa-solid fa-bolt me-1"></i> Start Saving — Rent for ₹249/Day
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Key Benefits Section -->
   <section class="py-5 bg-white">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-badge">Why jdrides</span>
         <h2 class="section-title">Why Choose jdrides Electric Scooty?</h2>
         <p class="section-desc">We offer Delhi's cleanest and most affordable personal commute solution.</p>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-box">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-tag"></i>
@@ -486,7 +626,7 @@
             <p class="small text-muted mb-0">Lowest rental rates in Delhi NCR with zero hidden fees and transparent billing.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-box">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-charging-station"></i>
@@ -495,7 +635,7 @@
             <p class="small text-muted mb-0">Charge anywhere using the included portable charger on any regular 3-pin plug.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-box">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-id-card"></i>
@@ -504,7 +644,7 @@
             <p class="small text-muted mb-0">No complicated paperwork. Just show your original Driving License & Aadhar Card.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
           <div class="feature-box">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-train-subway"></i>
@@ -520,7 +660,7 @@
   <!-- Document Checklist Highlight Banner -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border">
+      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border" data-aos="fade-up">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <span class="section-badge">Required Documents</span>
@@ -567,7 +707,7 @@
   <!-- Customer Reviews -->
   <section class="py-5 bg-white">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-badge">Rider Feedback</span>
         <h2 class="section-title">What Our EV Riders Say</h2>
         <p class="section-desc">Over 500+ satisfied customers trust jdrides for clean, affordable city commuting.</p>
@@ -575,7 +715,7 @@
 
       <div class="row g-4">
         <!-- Review 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="testimonial-card">
             <div class="text-warning mb-3">
               <i class="fa-solid fa-star"></i>
@@ -598,7 +738,7 @@
         </div>
 
         <!-- Review 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="testimonial-card">
             <div class="text-warning mb-3">
               <i class="fa-solid fa-star"></i>
@@ -621,7 +761,7 @@
         </div>
 
         <!-- Review 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="testimonial-card">
             <div class="text-warning mb-3">
               <i class="fa-solid fa-star"></i>
@@ -649,14 +789,14 @@
   <!-- FREQUENTLY ASKED QUESTIONS -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-badge">Got Questions?</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
         <p class="section-desc">Everything you need to know about renting our White E-Scooty.</p>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8" data-aos="fade-up">
           <div class="accordion accordion-custom" id="faqAccordion">
             <!-- FAQ 1 -->
             <div class="accordion-item">
@@ -735,7 +875,7 @@
 
   <!-- CTA Banner -->
   <section class="py-5 text-white" style="background: linear-gradient(135deg, #ff6000, #d84315);">
-    <div class="container py-3 text-center">
+    <div class="container py-3 text-center" data-aos="zoom-in">
       <h2 class="fw-bold mb-3">Ready to Ride? Book Your White E-Scooty at ₹249 Today!</h2>
       <p class="lead mb-4">Walk into our shop near Kanhaiya Nagar Metro or message us directly on WhatsApp with your DL & Aadhar Card.</p>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -755,7 +895,7 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
-            <i class="fa-solid fa-moped text-warning me-2"></i>jd<span class="text-warning">rides</span>
+            <i class="fa-solid fa-motorcycle text-warning me-2"></i>jd<span class="text-warning">rides</span>
           </div>
           <p class="text-white mb-4">
             Delhi's trusted self-drive White Electric Scooty rental service. Zero fuel cost, high efficiency, fully inspected EV fleets for daily commute, college, and delivery work.
@@ -908,6 +1048,8 @@
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
 </body>

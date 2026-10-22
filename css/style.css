@@ -17,6 +17,10 @@
   --white-pure: #ffffff;
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-primary);
@@ -72,6 +76,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.65rem;
   letter-spacing: -0.5px;
   color: #0f172a !important;
+}
+
+.navbar-brand .scooty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.45rem;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .scooty-icon {
+  transform: translateX(3px);
 }
 
 .navbar-brand .brand-badge {
@@ -140,8 +158,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   position: relative;
   background: radial-gradient(circle at 15% 30%, rgba(255, 96, 0, 0.08) 0%, transparent 60%),
-              linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 250, 252, 0.88) 100%),
-              url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+              linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.92) 100%),
+              url('../images/escooty-white-1.jpg') center/cover no-repeat;
   min-height: 84vh;
   display: flex;
   align-items: center;
@@ -662,6 +680,103 @@ h1, h2, h3, h4, h5, h6 {
 
 #autoContactModal .modal-body {
   padding: 28px;
+}
+
+/* ---------------- How It Works (Step Cards) ---------------- */
+.step-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 34px 22px 26px;
+  text-align: center;
+  transition: all 0.35s ease;
+  height: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 96, 0, 0.4);
+}
+
+.step-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(255, 96, 0, 0.35);
+}
+
+.step-icon-wrap {
+  width: 68px;
+  height: 68px;
+  margin: 10px auto 18px;
+  border-radius: 50%;
+  background: rgba(255, 96, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  transition: all 0.35s ease;
+}
+
+.step-card:hover .step-icon-wrap {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* ---------------- EV Savings & Comparison Section ---------------- */
+.comparison-card {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid var(--card-border);
+  background: #ffffff;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+
+.comparison-card.highlight {
+  border-color: var(--primary-color);
+  box-shadow: 0 16px 35px rgba(255, 96, 0, 0.15);
+  position: relative;
+}
+
+.comparison-header {
+  padding: 22px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.comparison-card.highlight .comparison-header {
+  background: linear-gradient(135deg, rgba(255, 96, 0, 0.08) 0%, rgba(255, 133, 0, 0.14) 100%);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 20px 22px;
+  margin: 0;
+}
+
+.comparison-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--card-border);
+  font-size: 0.91rem;
+}
+
+.comparison-list li:last-child {
+  border-bottom: none;
 }
 
 /* ---------------- Responsive Rules ---------------- */

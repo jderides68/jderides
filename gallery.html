@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -36,7 +38,7 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <span class="scooty-icon"><i class="fa-solid fa-moped"></i></span>
+        <i class="fa-solid fa-motorcycle text-warning me-2 fs-3"></i>
         <span>jd<span class="brand-badge">rides</span></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
@@ -84,17 +86,17 @@
       <!-- Fleet Grid -->
       <div class="row g-4" id="galleryContainer">
 
-        <!-- Item 1: Full Front 3/4 Angle -->
-        <div class="col-md-6 col-lg-4 gallery-item body">
+        <!-- Item 1: Full Multi-Angle Showcase -->
+        <div class="col-md-6 col-lg-4 gallery-item body" data-aos="fade-up" data-aos-delay="100">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
               <span class="badge-tag">White E-Scooty</span>
-              <img src="images/escooty-white-1.jpg" alt="White Electric Scooty Front Angle">
+              <img src="images/escooty-ola-features-1.jpg" alt="White Electric Scooty All Angles Collage" style="object-fit: cover;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Front & Side Profile</h5>
+              <h5 class="fw-bold mb-1">All Angles & Overview</h5>
               <p class="small text-muted mb-2">Color: Pearl White | 100-120 KM Range</p>
-              <p class="small text-secondary">Futuristic aerodynamic body with clean white finish and lightweight handling.</p>
+              <p class="small text-secondary">Front, side, and rear view showing elegant white body, digital console & under-seat boot space.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -103,17 +105,17 @@
           </div>
         </div>
 
-        <!-- Item 2: Front Headlamp View -->
-        <div class="col-md-6 col-lg-4 gallery-item body">
+        <!-- Item 2: Smart EV Tech & Features -->
+        <div class="col-md-6 col-lg-4 gallery-item tech" data-aos="fade-up" data-aos-delay="200">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
-              <span class="badge-tag">LED Vision</span>
-              <img src="images/escooty-white-2.jpg" alt="White E-Scooty Front Twin LED">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
+              <span class="badge-tag bg-primary">EV Features</span>
+              <img src="images/escooty-ola-features-2.jpg" alt="White E-Scooty Features Collage" style="object-fit: cover;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Dual Projector LED Headlamps</h5>
-              <p class="small text-muted mb-2">High Beam LED | Daytime Running Lights</p>
-              <p class="small text-secondary">Crystal-clear night visibility for safe commuting across Delhi NCR roads.</p>
+              <h5 class="fw-bold mb-1">Smart Features & Cockpit</h5>
+              <p class="small text-muted mb-2">Digital Meter | Under-Seat Boot | Zero Petrol</p>
+              <p class="small text-secondary">Eco friendly, cost-effective, easy to ride and safe. Portable home charger included.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -122,17 +124,17 @@
           </div>
         </div>
 
-        <!-- Item 3: Side Profile -->
-        <div class="col-md-6 col-lg-4 gallery-item body">
+        <!-- Item 3: Studio Profile -->
+        <div class="col-md-6 col-lg-4 gallery-item body" data-aos="fade-up" data-aos-delay="300">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
-              <span class="badge-tag">Ergonomic Build</span>
-              <img src="images/escooty-white-1.jpg" alt="White E-Scooty Side Profile">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
+              <span class="badge-tag">Studio Shot</span>
+              <img src="images/escooty-white-landscape.jpg" alt="White E-Scooty Studio Landscape" style="object-fit: contain; padding: 10px;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Comfortable Dual Seater</h5>
-              <p class="small text-muted mb-2">Thick Cushioned Seat | Large Footboard</p>
-              <p class="small text-secondary">Spacious legroom and comfortable pillion seating with sturdy grab rail.</p>
+              <h5 class="fw-bold mb-1">White E-Scooty Studio View</h5>
+              <p class="small text-muted mb-2">Padded Seat | Backrest Support</p>
+              <p class="small text-secondary">Spacious legroom and comfortable pillion seating with sturdy grab rail and cushioned backrest.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -142,16 +144,16 @@
         </div>
 
         <!-- Item 4: Digital Speedometer -->
-        <div class="col-md-6 col-lg-4 gallery-item tech">
+        <div class="col-md-6 col-lg-4 gallery-item tech" data-aos="fade-up" data-aos-delay="100">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
-              <span class="badge-tag bg-primary">Digital Dashboard</span>
-              <img src="images/escooty-white-2.jpg" alt="Smart Digital Display Speedometer">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
+              <span class="badge-tag bg-primary">EV Cockpit</span>
+              <img src="images/escooty-white-headlamp.jpg" alt="Smart Digital Display Speedometer" style="object-fit: cover;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Smart Digital Console</h5>
+              <h5 class="fw-bold mb-1">Twin LED & Digital Console</h5>
               <p class="small text-muted mb-2">Real-time Battery % | Speed | Eco Mode</p>
-              <p class="small text-secondary">Live monitoring of remaining battery level, trip meters, and speed limits.</p>
+              <p class="small text-secondary">Live monitoring of remaining battery level, trip meters, and ultra-bright projector LED lights.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -160,17 +162,17 @@
           </div>
         </div>
 
-        <!-- Item 5: Boot Space -->
-        <div class="col-md-6 col-lg-4 gallery-item features">
+        <!-- Item 5: Studio Portrait -->
+        <div class="col-md-6 col-lg-4 gallery-item body" data-aos="fade-up" data-aos-delay="200">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
-              <span class="badge-tag bg-success">Under-Seat Boot</span>
-              <img src="images/escooty-white-1.jpg" alt="Large Boot Space Under Seat">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
+              <span class="badge-tag bg-success">Actual Vehicle</span>
+              <img src="images/escooty-white-main.jpg" alt="White E-Scooty Studio Portrait" style="object-fit: contain; padding: 10px;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Spacious Storage Boot</h5>
-              <p class="small text-muted mb-2">36-Litre Capacity | Helmet Storage</p>
-              <p class="small text-secondary">Easily store your helmet, portable charger, shopping bags or courier parcels.</p>
+              <h5 class="fw-bold mb-1">Full Studio Showcase</h5>
+              <p class="small text-muted mb-2">Original Vehicle | Color: Pearl White</p>
+              <p class="small text-secondary">Actual vehicle available for rent at our Tri Nagar store. Clean and sanitized.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -179,17 +181,17 @@
           </div>
         </div>
 
-        <!-- Item 6: Rear View & Brakes -->
-        <div class="col-md-6 col-lg-4 gallery-item features">
+        <!-- Item 6: Alloy Wheels & Disc Brakes -->
+        <div class="col-md-6 col-lg-4 gallery-item features" data-aos="fade-up" data-aos-delay="300">
           <div class="custom-card shadow-sm">
-            <div class="vehicle-img-wrapper">
-              <span class="badge-tag bg-dark text-white">Rear & Brakes</span>
-              <img src="images/escooty-white-2.jpg" alt="Rear LED Light and Disc Brakes">
+            <div class="vehicle-img-wrapper" style="background-color: #fff;">
+              <span class="badge-tag bg-dark text-white">Alloy Wheels & Disc</span>
+              <img src="images/escooty-white-wheel.jpg" alt="Alloy Wheels and Disc Brakes" style="object-fit: cover;">
             </div>
             <div class="p-4">
-              <h5 class="fw-bold mb-1">Disc Brakes & Tubeless Tyres</h5>
-              <p class="small text-muted mb-2">Superior Braking | Puncture-Resistant</p>
-              <p class="small text-secondary">Equipped with front disc brake and responsive regenerative braking system.</p>
+              <h5 class="fw-bold mb-1">Alloy Wheels & Disc Brakes</h5>
+              <p class="small text-muted mb-2">Superior Braking | Heavy-Duty Suspension</p>
+              <p class="small text-secondary">Equipped with front disc brake and premium alloy wheels for great road grip.</p>
               <div class="d-flex justify-content-between align-items-center pt-2 border-top">
                 <span class="price-tag">₹249 <small class="text-muted fs-6">/day</small></span>
                 <button class="btn btn-sm btn-primary-custom" data-bs-toggle="modal" data-bs-target="#autoContactModal">Rent Now</button>
@@ -223,7 +225,7 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
-            <i class="fa-solid fa-moped text-warning me-2"></i>jd<span class="text-warning">rides</span>
+            <i class="fa-solid fa-motorcycle text-warning me-2"></i>jd<span class="text-warning">rides</span>
           </div>
           <p class="text-white mb-4">
             Delhi's trusted self-drive White Electric Scooty rental service. Zero fuel cost, high efficiency, fully inspected EV fleets for daily commute, college, and delivery work.
@@ -376,6 +378,8 @@
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
 </body>
